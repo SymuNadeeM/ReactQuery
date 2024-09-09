@@ -3,6 +3,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { Link, Route, Routes } from "react-router-dom";
 import './App.css';
 import Home from "./Components/Home";
+import RQHeros from "./Components/NewCompo/RQHeros";
 import RQISupperheroesPage from "./Components/RQISupperheroes.Page";
 import RQSuperHeros from "./Components/RQSuperHeros";
 import SuperHeroes from "./Components/SuperHeroes";
@@ -30,6 +31,7 @@ function App() {
             <li>
               <Link to="/rq-pagging">Pagging</Link>
             </li>
+            <li><Link to="/new-rq-hero">New RQ hero</Link></li>
           </ul>
         </nav>                
         <Routes>
@@ -38,6 +40,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/super-hero"  element={<SuperHeroes/>} />
           <Route path="/rq-super-hero" element={<RQSuperHeros/>} />         
+          <Route path="/new-rq-hero" element={<RQHeros/>} />         
         </Routes>   
         <ReactQueryDevtools initiallsOpem={false} position="bottom-right" />   
         </QueryClientProvider>
